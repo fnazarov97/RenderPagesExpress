@@ -1,0 +1,35 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Calculator
+  link(rel='stylesheet' href='css/styles.css')
+.container
+  .calculator
+    .row1
+      input#result(type='text' name='result' placeholder='Result' readonly='')
+    .row2
+      input.btn(type='button' value='1')
+      input.btn(type='button' value='2')
+      input.btn(type='button' value='3')
+      input.btn(type='button' value='+')
+      input#clear.btn(type='button' value='c')
+    .row3
+      input.btn(type='button' value='4')
+      input.btn(type='button' value='5')
+      input.btn(type='button' value='6')
+      input.btn(type='button' value='-')
+      input.btn(type='button' value='<=')
+    .row4
+      input.btn(type='button' value='7')
+      input.btn(type='button' value='8')
+      input.btn(type='button' value='9')
+      input.btn(type='button' value='*')
+      input.btn(type='button' value='%')
+    .row5
+      input.btn(type='button' value='.')
+      input.btn(type='button' value='0')
+      input.btn(type='button' value='/')
+      input.btn.equal(type='button' value='=')
+script(src='js/script.js')
