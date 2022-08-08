@@ -1,4 +1,3 @@
-
 //PORT
 const PORT = process.env.PORT || 3030
 
@@ -9,19 +8,23 @@ const server = express()
 //CONTROLLERS
 const {HomeController,
       AboutController,
+      TimerController,
+      TodoController,
       UserController,
       users
 } = require('./controllers')
 
 //EXPRESS ENGINE
 server.set('view engine', 'pug')
-//STATIC FOLDERS
 
+//STATIC FOLDERS
 server.use(express.static('publics'))
 
 //ROOTS
 server.get('/', HomeController)
 server.get('/calculator', AboutController)
+server.get('/timer', TimerController)
+server.get('/todo', TodoController)
 server.get('/:name', UserController)
 
 //SERVER LISTENING

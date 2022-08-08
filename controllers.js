@@ -6,6 +6,13 @@ const AboutController = (req, res) =>{
     res.render('calculator')
 }
 
+const TimerController = (req, res) => {
+    res.render('timer')
+}
+const TodoController = (req, res) => {
+    res.render('todo')
+}
+
 const UserController = (req,res) =>{
         if(users.find(user => user.name == req.params.name.toLowerCase())){
             res.status(200)
@@ -27,6 +34,8 @@ const users = [
 module.exports = {
     HomeController, 
     AboutController,
+    TimerController,
+    TodoController,
     UserController,
     users
 }
